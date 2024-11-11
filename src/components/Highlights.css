@@ -1,0 +1,109 @@
+.highlights {
+    height: 100vh;
+    background: linear-gradient(135deg, #fdfae6, #fff);
+    background: linear-gradient(135deg, #e2e2e2, #4f9ad9);
+
+    /* Light Grey to Soft Blue */
+    color: #333;
+    font-family: "Bricolage Grotesque", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.highlights h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.highlights p {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 40px;
+    max-width: 900px;
+    line-height: 1.5;
+}
+
+.highlights-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+.highlight-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.highlight-card h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.highlight-card p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.highlight-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1024px) {
+    .highlights h2 {
+        font-size: 2.4rem;
+    }
+
+    .highlights p {
+        font-size: 1.1rem;
+    }
+
+    .highlight-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .highlight-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .highlights h2 {
+        font-size: 2rem;
+    }
+
+    .highlights p {
+        font-size: 1rem;
+    }
+
+    .highlight-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .highlight-card p {
+        font-size: 0.95rem;
+    }
+}

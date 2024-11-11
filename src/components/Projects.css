@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #f9f0b3;
+    /* Light Gold to White */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* Projects Section */
+.projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fdfae6, #fff);
+    /* Light Gold to White */
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.projects h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projects .projects-intro {
+    font-size: 1.8rem;
+    color: #555;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.projects-list {
+    display: flex;
+    gap: 60px;
+    padding-bottom: 20px;
+    width: 100%;
+    animation: scrollLeft 60s linear infinite;
+    /* overflow: hidden; */
+}
+
+.project {
+    position: relative;
+    width: 400px;
+    /* Increase card size */
+    height: 500px;
+    /* Larger height */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    flex: none;
+}
+
+.project:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.overlay-content h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.overlay-content p {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Infinite Horizontal Scrolling Animation */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+        /* Repeat the cards in infinite loop */
+    }
+}
+
+/* Pause Scrolling on Hover */
+.projects-list:hover {
+    animation-play-state: paused;
+}
+
+.projects-list .project {
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects-list .project:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 3.5rem;
+    }
+
+    .projects .projects-intro {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .projects-list {
+        gap: 30px;
+    }
+
+    .project {
+        width: 350px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects h2 {
+        font-size: 2.5rem;
+    }
+
+    .projects .projects-intro {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .projects-list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project {
+        width: 280px;
+        height: 400px;
+    }
+}
