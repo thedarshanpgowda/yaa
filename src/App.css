@@ -174,3 +174,35 @@ html {
     padding: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 42px !important;
+    line-height: 52px !important;
+    margin-top: 170px !important;
+  }
+
+  .hero {
+    height: auto !important;
+  }
+
+  .highlights {
+    height: auto !important;
+  }
+
+  .projects-list {
+    flex-direction: row;
+  }
+
+  .projects {
+    height: auto !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .partners {
+    height: auto !important;
+  }
+}

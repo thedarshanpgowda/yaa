@@ -196,7 +196,7 @@ body {
     }
 
     .projects-list {
-        flex-direction: column;
+        flex-direction: row;
         gap: 40px;
     }
 
@@ -204,4 +204,5 @@ body {
         width: 280px;
         height: 400px;
     }
+    
 }
