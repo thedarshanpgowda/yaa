@@ -198,11 +198,12 @@ body {
     .projects-list {
         flex-direction: row;
         gap: 40px;
+        animation: scrollLeft 30s linear infinite !important;
     }
 
     .project {
         width: 280px;
         height: 400px;
     }
-    
+
 }

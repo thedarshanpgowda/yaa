@@ -1,20 +1,34 @@
-// src/components/LandingPage.js
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Partners from "./Partners.js";
 import Highlights from "./Highlights.js";
 import Projects from "./Projects.js";
 import Footer, { Founders } from "./Footer.js";
-import { Link } from "react-router-dom";
 import FaqAccordion from "../Accordian.js";
 
-
 const LandingPage = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <div className="landing-page">
             <header className="hero">
                 <nav className="navbar">
                     <h1 className="logo">Yaa</h1>
-                    <ul className="nav-links">
+                    <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <div className="bar"></div>
+                        <div className="bar"></div>
+                        <div className="bar"></div>
+                    </div>
+                    <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>
+                        <h1 className="cancelBtn" onClick={closeMenu}>X</h1>
                         <li><Link to={'/about'}>About</Link></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#partners">Partners</a></li>

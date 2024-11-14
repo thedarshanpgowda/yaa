@@ -3,6 +3,7 @@ import './App.css';
 import LandingPage from './components/Landingpage';
 import About from './components/About';
 import Contact from './components/Contact';
+import ProjectPage from './components/Project';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/projects' element={<ProjectPage />} />
+
       </Routes>
     </BrowserRouter>
   );

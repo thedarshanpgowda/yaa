@@ -1,4 +1,4 @@
-/* styles.css */
+/* General Styles */
 body,
 html {
   margin: 0;
@@ -6,53 +6,16 @@ html {
   box-sizing: border-box;
 }
 
-.landing-page {
-  text-align: center;
-  color: #333;
-}
-
-.hero {
-  background-color: #f4f4f4;
-  padding: 2em;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  margin: 0.5em 0;
-}
-
-
-
-.footer {
-  background-color: #222;
-  color: #000;
-  padding: 1em;
-}
-
-.footer a {
-  color: #ffa500;
-  margin: 0 0.5em;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Hero.css */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body,
-html {
-  font-family: Arial, sans-serif;
-}
-
 .landing-page {
   width: 100%;
+  text-align: center;
+  color: #333;
 }
 
 .hero {
@@ -64,11 +27,15 @@ html {
   height: 100vh;
   color: #000;
   background: linear-gradient(135deg, #f9f0b3, #ffffff);
-  /* Light Gold to White */
-  /* Gradient Background */
   padding: 2rem;
 }
 
+.hero h1 {
+  font-size: 4em;
+  margin: 0.5em 0;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -86,6 +53,7 @@ html {
   color: #000;
 }
 
+/* Desktop Nav Links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -103,6 +71,7 @@ html {
   color: #ffd700;
 }
 
+/* Hero Content */
 .hero-content {
   max-width: 960px;
   padding: 1rem;
@@ -110,11 +79,10 @@ html {
 
 .hero-title {
   font-weight: 650;
-  margin-bottom: 0.5rem;
   font-family: "Bricolage Grotesque", sans-serif;
-  margin: 0.5em 0;
-  font-size: 64px !important;
+  font-size: 64px;
   line-height: 82px;
+  margin: 0.5em 0;
 }
 
 .hero-subtitle {
@@ -160,26 +128,196 @@ html {
   color: #333;
 }
 
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #000;
+  padding: 1em;
+}
+
+.footer a {
+  color: #ffa500;
+  margin: 0 0.5em;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+}
+
+/* Right Sidebar Navigation */
+.nav-links {
+  transition: transform 0.3s ease;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+}
+
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-links.active a {
+  color: #000;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.cancelBtn {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
+
+  .cancelBtn {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
   }
 
-  .hero-subtitle {
+  .nav-links {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    height: 77%;
+    width: 350px;
+    background-color: #f4f4f4;
+    padding-top: 4rem;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 60px;
+    justify-content: center;
+    /* align-items: center; */
+    transform: translateX(100%);
+    border-radius: 8px 0 0 8px;
+    margin: 12px;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 3em !important;
+    line-height: 62px !important;
+    margin-top: 170px !important;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
     font-size: 1rem;
   }
 
-  .navbar {
-    padding: 1rem;
+  /* Hide desktop nav-links by default */
+  .nav-links {
+    transform: translateX(100%);
+  }
+
+  .hero {
+    height: auto !important;
+  }
+
+  .highlights {
+    height: auto !important;
+  }
+
+  .projects-list {
+    flex-direction: row;
+  }
+
+  .projects {
+    height: auto !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .partners {
+    height: auto !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero-title {
+    font-size: 42px;
+    line-height: 52px;
+    margin-top: 170px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .hero-title {
     font-size: 42px !important;
     line-height: 52px !important;
     margin-top: 170px !important;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f4f4f4;
+    padding-top: 4rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
   }
 
   .hero {
