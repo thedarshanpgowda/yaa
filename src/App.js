@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import ProjectPage from './components/Project';
 import Testimonials from './components/Testimonals';
 import ProjectShowcase from './components/ProjectShowcase';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/testimonals' element={<Testimonials />} />
         <Route path='/showProjects' element={<ProjectShowcase />} />
+        <Route path='/services' element={<Services />} />
         <Route path='/projects/:id' element={<ProjectPage />} />
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
