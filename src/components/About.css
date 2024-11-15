@@ -270,3 +270,9 @@ blockquote {
         padding: 5%;
     }
 }
+
+@media (max-width: 480px) {
+    .approach-cards {
+        grid-template-columns: 1fr;
+    }
+}
