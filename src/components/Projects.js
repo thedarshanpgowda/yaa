@@ -42,7 +42,7 @@ const Projects = () => {
                         <div className="overlay">
                             <div className="overlay-content">
                                 <h4>Emotional Tracker</h4>
-                                <p>Developed for Perceptron Solution, this tool helps track and improve mental well-being by monitoring emotional health over time.</p>
+                                <p>Developed for MCE students, this tool helps track and improve mental well-being by monitoring emotional health over time.</p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ const Projects = () => {
                         <div className="overlay">
                             <div className="overlay-content">
                                 <h4>Emotional Tracker</h4>
-                                <p>Developed for Perceptron Solution, this tool helps track and improve mental well-being by monitoring emotional health over time.</p>
+                                <p>Developed for MCE students, this tool helps track and improve mental well-being by monitoring emotional health over time.</p>
                             </div>
                         </div>
                     </div>

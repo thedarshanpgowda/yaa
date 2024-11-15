@@ -33,7 +33,7 @@ const Partners = () => {
                             />
                         </div>
                         <h3>Perceptron Solution</h3>
-                        <p>Enabling mental well-being with innovative trackers.</p>
+                        <p>Enabling AI Integrated softwares for learning Stocks.</p>
                     </div>
                     <div className="partner">
                         <div className="partner-logo-container">

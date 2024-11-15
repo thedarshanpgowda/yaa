@@ -438,7 +438,23 @@ body {
 
     .main-image {
         height: 30vh;
-        display: none;
+        position: absolute;
+        width: 90% !important;
+    }
+
+    .hero-content {
+        /* color: #fff !important; */
+    }
+
+    .project-subtitle {
+        color: #fff !important;
+        padding: 20px;
+        font-size: 20px !important;
+        background: #00000074;
+    }
+
+    .project-title {
+        -webkit-text-fill-color: white !important;
     }
 
     .feature-card {

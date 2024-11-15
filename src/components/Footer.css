@@ -130,6 +130,45 @@
     color: #005bbb;
 }
 
+
+/* Apple-inspired button style */
+.button {
+    background-color: #0071e3;
+    /* Blue like Apple buttons */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    /* Rounded edges */
+    padding: 12px 24px;
+    /* Sufficient padding */
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Slight shadow */
+}
+
+.button:hover {
+    background-color: #005bb5;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.5);
+    /* Blue focus outline */
+}
+
+.button:active {
+    background-color: #003d82;
+    /* Even darker blue when clicked */
+}
+
 /* Animation for fading in */
 @keyframes fadeIn {
     from {

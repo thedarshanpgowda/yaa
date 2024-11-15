@@ -4,6 +4,8 @@ import LandingPage from './components/Landingpage';
 import About from './components/About';
 import Contact from './components/Contact';
 import ProjectPage from './components/Project';
+import Testimonials from './components/Testimonals';
+import ProjectShowcase from './components/ProjectShowcase';
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/testimonals' element={<Testimonials />} />
+        <Route path='/showProjects' element={<ProjectShowcase />} />
         <Route path='/projects/:id' element={<ProjectPage />} />
-
+        <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   );

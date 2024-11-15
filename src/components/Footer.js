@@ -2,6 +2,7 @@ import React from "react";
 import './Footer.css'; // Ensure to create a separate CSS file for styling
 import sp from './assets/IMG_1268.jpg'
 import cg from './assets/chandrababu.png'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,17 +32,21 @@ export const Founders = () => {
               <img src={sp} alt="Darshan S P" className="founder-image" />
               <div className="founder-info">
                 <h4>Darshan S P</h4>
-                <p>Co-Founder - A visionary tech enthusiast, focused on creating impactful software solutions for various industries.</p>
+                <p> <b>Co-Founder</b> <br />  A visionary tech enthusiast, focused on creating impactful software solutions for various industries.</p>
               </div>
             </div>
             <div className="founder">
               <img src={cg} alt="Chandrababu Gowda" className="founder-image" />
               <div className="founder-info">
                 <h4>Chandrababu Gowda</h4>
-                <p>Co-Founder - A creative problem-solver, dedicated to building innovative technology that powers growth and transformation.</p>
+                <p><b>Co-Founder</b> <br />  A creative problem-solver, dedicated to building innovative technology that powers growth and transformation.</p>
               </div>
             </div>
           </div>
+
+          <Link to={'/about'} className="button" >
+            Know More About Us
+          </Link>
         </div>
       </div>
     </footer>

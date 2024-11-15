@@ -1,0 +1,39 @@
+/* Medium-inspired cover block styling */
+.cover-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+
+.cover-image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(80%);
+    /* Darken the image slightly for better text contrast */
+}
+
+.company-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.company-name {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.company-description {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 600px;
+}

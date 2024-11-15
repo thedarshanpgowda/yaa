@@ -211,9 +211,10 @@ html {
     top: 3%;
     right: 5%;
     display: block;
-    font-size: 32px;
+    font-size: 32px !important;
     cursor: pointer;
     font-family: 'Nunito', sans-serif;
+
   }
 
   .nav-links {
@@ -234,6 +235,10 @@ html {
     border-radius: 8px 0 0 8px;
     margin: 12px;
     text-align: left;
+  }
+
+  .logo {
+    font-size: 32px !important;
   }
 
   .hero-title {
@@ -303,6 +308,7 @@ html {
     font-size: 42px !important;
     line-height: 52px !important;
     margin-top: 170px !important;
+    width: 390px;
   }
 
   .nav-links {
@@ -316,7 +322,7 @@ html {
     flex-direction: column;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     transform: translateX(100%);
   }
 

@@ -30,8 +30,8 @@ const LandingPage = () => {
                     <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>
                         <h1 className="cancelBtn" onClick={closeMenu}>X</h1>
                         <li><Link to={'/about'}>About</Link></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="/showProjects">Projects</a></li>
+                        <li><a href="/testimonals">Testimonals</a></li>
                         <li><Link to={'/contact'}>Contact</Link></li>
                     </ul>
                 </nav>

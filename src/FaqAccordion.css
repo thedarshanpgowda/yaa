@@ -20,7 +20,7 @@ body {
     width: 75%;
     margin: 50px auto;
     padding: 20px;
-    background-color: white;
+    background-color: linear-gradient(135deg, #f7f7f7, #ffffff);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -90,6 +90,7 @@ body {
 
 .accordion-item.open .accordion-content {
     display: block;
+    text-align: left;
 }
 
 /* Mobile Responsiveness */
